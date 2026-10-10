@@ -63,7 +63,6 @@ sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 10/g" /etc/pacman.conf
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 sed -i "s/#MAKEFLAGS/MAKEFLAGS/g" /etc/makepkg.conf
 sed -i "s/-j2/-j6/g" /etc/makepkg.conf
-sed -i "s#bin/discord#bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland#g" /opt/discord/discord.desktop
 echo -e "$hostname" > /etc/hostname
 useradd -m -g users -G wheel -s /bin/fish $username
 echo -en "$password\n$password" | passwd
@@ -79,8 +78,8 @@ sudo -u temp yay -S brother-hl-l3210cw --noconfirm
 sudo -u temp yay -S ttf-ms-fonts --noconfirm
 sudo -u temp yay -S protonup-qt --noconfirm
 sudo -u temp yay -S prismlauncher --noconfirm
-sudo -u temp yay -S neofetch --noconfirmc
-sudo -u temp yay -S python-vdf --noconfirmc
+sudo -u temp yay -S neofetch --noconfirm
+sudo -u temp yay -S python-vdf --noconfirm
 mkdir -p /home/$username/.config
 touch /home/$username/.config/baloofilerc
 tee -a /home/$username/.config/baloofilerc << END
