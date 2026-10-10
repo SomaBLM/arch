@@ -29,7 +29,7 @@ pacman -Sy archlinux-keyring --noconfirm
 
 pacstrap -i /mnt --noconfirm base base-devel linux linux-headers git nano fish \
     intel-ucode networkmanager efibootmgr \
-    pipewire-pulse bluez bluez-utils protontricks \
+    pipewire-pulse bluez bluez-utils protontricks sshfs \
     gnu-free-fonts ttf-droid piper noto-fonts-emoji \
     pavucontrol ntfs-3g openssh python-pip wget reflector \
     nvidia-open nvidia-open-lts lib32-nvidia-utils nvidia-utils lib32-opencl-nvidia nvidia-settings  \
