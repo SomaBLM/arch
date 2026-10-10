@@ -29,7 +29,7 @@ mount -t vfat -o fmask=0027,dmask=0027 /dev/$BOOT_PART /mnt/boot
 
 pacstrap -i /mnt --noconfirm base base-devel linux linux-headers git nano fish \
     intel-ucode networkmanager efibootmgr \
-    pipewire-pulse bluez bluez-utils \
+    pipewire-pulse bluez bluez-utils protontricks \
     gnu-free-fonts ttf-droid piper noto-fonts-emoji \
     pavucontrol ntfs-3g openssh python-pip wget reflector \
     mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau nvtop linux-firmware-amdgpu \
