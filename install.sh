@@ -29,7 +29,7 @@ pacman -Sy archlinux-keyring --noconfirm
 
 pacstrap -i /mnt --noconfirm base base-devel linux linux-headers git nano fish \
     intel-ucode networkmanager efibootmgr \
-    pipewire-pulse bluez bluez-utils \
+    pipewire-pulse bluez bluez-utils protontricks \
     gnu-free-fonts ttf-droid piper noto-fonts-emoji \
     pavucontrol ntfs-3g openssh python-pip wget reflector \
     nvidia-open nvidia-open-lts lib32-nvidia-utils nvidia-utils lib32-opencl-nvidia nvidia-settings  \
@@ -39,7 +39,7 @@ pacstrap -i /mnt --noconfirm base base-devel linux linux-headers git nano fish \
     libreoffice-fresh vivaldi vivaldi-ffmpeg-codecs mtools linux-firmware-intel \
     jre8-openjdk jre11-openjdk jre17-openjdk jre21-openjdk jre-openjdk wireless-regdb \
     system-config-printer cups vlc vlc-plugins-all discord gparted mkinitcpio python-pipx \
-    exfat-utils r8168-lts x265 helvum foliate libde265 libmatroska kvazaar qbittorrent \
+    r8168-lts x265 helvum foliate libde265 libmatroska kvazaar qbittorrent \
     pipewire-jack powerdevil phonon-qt6-vlc x264 x265 mpg123 aom flac libkate libogg libtheora vorta \
     libvpx opus speex libvorbis libva-nvidia-driver dav1d mkvtoolnix-gui unrar openrgb python-requests dosfstools exfatprogs chromium lm_sensors lib32-lm_sensors
 
