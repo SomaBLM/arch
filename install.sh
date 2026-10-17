@@ -108,21 +108,6 @@ systemctl enable plasmalogin
 systemctl enable bluetooth
 systemctl enable cups
 
-journalctl --vacuum-size=100M --vacuum-time=2weeks
-touch /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
-tee -a /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf << END
-[connection]
-wifi.powersave = 2
-
-[Trigger]
-Type = Package
-Operation = Upgrade
-Target = systemd
-[Action]
-Description = Updating systemd-boot
-When = PostTransaction
-Exec = /usr/bin/bootctl update
-END
 mkdir -p /etc/pacman.d/hooks
 touch /etc/pacman.d/hooks/nvidia.hook
 tee -a /etc/pacman.d/hooks/nvidia.hook << END
