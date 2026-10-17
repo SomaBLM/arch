@@ -84,11 +84,19 @@ sudo -u temp yay -S neofetch --noconfirm
 sudo -u temp yay -S python-vdf --noconfirm
 mkdir -p /home/$username/.config
 mkdir -p /home/$username/.config/fish
+mkdir -p /home/$username/.config/fish/functions
 touch /home/$username/.config/fish/config.fish
 tee -a /home/$username/.config/fish/config.fish << END
 neofetch
 if status is-interactive
     # Commands to run in interactive sessions can go here
+end
+END
+
+touch /home/$username/.config/fish/functions/update.fish
+tee -a /home/$username/.config/fish/functions/update.fish << END
+function update --description 'updates system'
+     yay && sudo flatpak update && sudo find /var/cache/pacman/pkg/ -mindepth 1 -delete && yay -Scc --noconfirm && sh /etc/check-atomic-arch.sh; 
 end
 END
 cd /tmp && touch panel-restart && echo '#!/bin/bash' > panel-restart && echo 'killall plasmashell;plasmashell &' >> panel-restart && chmod +x panel-restart && mv panel-restart /usr/bin/
