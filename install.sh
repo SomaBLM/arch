@@ -108,21 +108,6 @@ systemctl enable plasmalogin
 systemctl enable bluetooth
 systemctl enable cups
 
-mkdir -p /etc/pacman.d/hooks
-touch /etc/pacman.d/hooks/nvidia.hook
-tee -a /etc/pacman.d/hooks/nvidia.hook << END
-[Trigger]
-Operation=Install
-Operation=Upgrade
-Operation=Remove
-Type=Package
-Target=nvidia
-Target=linux
-[Action]
-Depends=mkinitcpio
-When=PostTransaction
-Exec=/usr/bin/mkinitcpio -p linux
-END
 sed -i "s/^HOOKS.*/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/g" /etc/mkinitcpio.conf
 sed -i 's/^MODULES.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
 mkinitcpio -P
