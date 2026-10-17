@@ -136,7 +136,7 @@ tee -a /boot/loader/entries/archLTS.conf << END
 title Arch Linux
 linux vmlinuz-linux-lts
 initrd /intel-ucode.img
-initrd initramfs-linux-lts.img
+initrd /initramfs-linux-lts.img
 options root="LABEL=arch" rw
 END
 
