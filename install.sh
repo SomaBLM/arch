@@ -33,7 +33,7 @@ pacstrap -i /mnt --noconfirm base base-devel linux linux-headers git nano fish \
     gnu-free-fonts ttf-droid piper noto-fonts-emoji \
     pavucontrol ntfs-3g openssh python-pip wget reflector \
     nvidia-open nvidia-open-lts lib32-nvidia-utils nvidia-utils lib32-opencl-nvidia nvidia-settings  \
-    lib32-vkd3d vkd3d opencl-nvidia libvdpau libxnvctrl egl-wayland nvtop linux-firmware-nvidia \
+    lib32-vkd3d vkd3d opencl-nvidia libvdpau libxnvctrl egl-wayland linux-firmware-nvidia \
     ppsspp steam nvtop vulkan-tools wine-staging lutris winetricks ffnvcodec-headers \
     plasma-meta kde-applications-meta packagekit-qt6 fwupd flatpak linux-firmware-realtek \
     libreoffice-fresh vivaldi vivaldi-ffmpeg-codecs mtools linux-firmware-intel \
