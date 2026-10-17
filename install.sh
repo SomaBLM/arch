@@ -110,12 +110,6 @@ systemctl enable plasmalogin
 systemctl enable bluetooth
 systemctl enable cups
 
-journalctl --vacuum-size=100M --vacuum-time=2weeks
-touch /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
-tee -a /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf << END
-[connection]
-wifi.powersave = 2
-
 sed -i "s/^HOOKS.*/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/g" /etc/mkinitcpio.conf
 sed -i 's/^MODULES.*/MODULES=(amdgpu)/' /etc/mkinitcpio.conf
 mkinitcpio -P
