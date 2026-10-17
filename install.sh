@@ -134,7 +134,7 @@ tee -a /boot/loader/entries/archLTS.conf << END
 title Arch Linux
 linux vmlinuz-linux-lts
 initrd /intel-ucode.img
-initrd initramfs-linux-lts.img
+initrd /initramfs-linux-lts.img
 options root="LABEL=arch" rw nvidia-drm.modeset=1 nvidia_drm.fbdev=1
 END
 
