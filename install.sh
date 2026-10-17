@@ -32,15 +32,15 @@ pacstrap -i /mnt --noconfirm base base-devel linux linux-headers git nano fish \
     pipewire-pulse bluez bluez-utils protontricks sshfs \
     gnu-free-fonts ttf-droid piper noto-fonts-emoji \
     pavucontrol ntfs-3g openssh python-pip wget reflector \
-    mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau nvtop linux-firmware-amdgpu \
+    mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau linux-firmware-amdgpu \
     ppsspp nvtop vulkan-tools wine-staging lutris winetricks ffnvcodec-headers \
     plasma-meta kde-applications-meta packagekit-qt6 fwupd flatpak linux-firmware-realtek \
     libreoffice-fresh vivaldi vivaldi-ffmpeg-codecs mtools linux-firmware-intel \
     jre8-openjdk jre11-openjdk jre17-openjdk jre21-openjdk jre-openjdk wireless-regdb \
     system-config-printer cups vlc vlc-plugins-all discord gparted mkinitcpio python-pipx \
-    exfat-utils r8168-lts x265 helvum foliate libde265 libmatroska kvazaar qbittorrent \
+    r8168-lts x265 helvum foliate libde265 libmatroska kvazaar qbittorrent \
     pipewire-jack powerdevil phonon-qt6-vlc x264 x265 mpg123 aom flac libkate libogg libtheora vorta \
-    libvpx opus speex libvorbis libva-nvidia-driver dav1d mkvtoolnix-gui unrar openrgb python-requests dosfstools exfatprogs lm_sensors lib32-lm_sensors
+    libvpx opus speex libvorbis linux-lts dav1d mkvtoolnix-gui unrar openrgb python-requests dosfstools exfatprogs lm_sensors lib32-lm_sensors
 
 
 
