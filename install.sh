@@ -83,16 +83,6 @@ sudo -u temp yay -S prismlauncher --noconfirm
 sudo -u temp yay -S neofetch --noconfirm
 sudo -u temp yay -S python-vdf --noconfirm
 mkdir -p /home/$username/.config
-touch /home/$username/.config/baloofilerc
-tee -a /home/$username/.config/baloofilerc << END
-[General]
-dbVersion=2
-exclude filters=*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,core-dumps,lost+found
-exclude filters version=8
-exclude folders[e]=$HOME/Alphinaud/,$HOME/G'raha Tia/,$HOME/Rimuru/
-END
-sed -i 's/~home/HOME'/g /home/$username/.config/baloofilerc
-sed -i 's/~]/e]'/g /home/$username/.config/baloofilerc
 mkdir -p /home/$username/.config/fish
 touch /home/$username/.config/fish/config.fish
 tee -a /home/$username/.config/fish/config.fish << END
